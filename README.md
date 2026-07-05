@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AdeHQ Marketing Website
 
-## Getting Started
+Professional marketing site for [AdeHQ](https://adehq.com) — the operating system for AI employees.
 
-First, run the development server:
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — hero, product story, pricing preview, FAQ |
+| `/product` | Product features, orchestration, intelligence modes |
+| `/pricing` | Plans, AI Work Hours, top-ups, pricing FAQ |
+| `/use-cases` | Expanded use case guides |
+| `/about` | Mission, team, roadmap |
+| `/blog` | Blog index + posts |
+| `/careers` | Open roles |
+| `/contact` | Contact form |
+| `/privacy`, `/terms`, `/security` | Legal pages |
+
+## Stack
+
+- **Next.js 16** (App Router)
+- **Tailwind CSS v4** with AdeHQ design tokens
+- **Framer Motion** for scroll animations
+- **Lucide React** for icons
+
+## Development
 
 ```bash
+cd website
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Deploy to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Or connect the `website` directory to Vercel from the dashboard. No environment variables required for the marketing site.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design system
 
-## Deploy on Vercel
+Brand tokens are sourced from the included AdeHQ design system specification:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Warm cream canvas (`#F6F3EE`)
+- Coral accent (`#E85D2C`)
+- Schibsted Grotesk + JetBrains Mono typography
+- Dark rail (`#1A1714`) for footer and product chrome
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Original `.dc.html` prototypes and design system files are in the parent directory.

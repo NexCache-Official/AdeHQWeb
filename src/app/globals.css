@@ -1,26 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ws-cream: #eef1f6;
+  --ws-canvas: #eef1f6;
+  --ws-surface: #ffffff;
+  --ws-muted: #eef1f6;
+  --ws-border: #e0e4ec;
+  --ws-border-2: #ebeef3;
+  --ws-rail: #0e1116;
+  --ws-ink: #10131a;
+  --ws-ink-2: #515866;
+  --ws-ink-3: #858c99;
+  --ws-accent: #2563eb;
+  --ws-accent-d: #1d4ed8;
+  --ws-accent-soft: #e7eefe;
+  --green: #1ba672;
+  --green-soft: #e3f4eb;
+  --amber: #cb8a1b;
+  --amber-soft: #fbefd6;
+  --danger: #d9483b;
+  --danger-soft: #fbe3e0;
+  --info: #2f6fed;
+  --info-soft: #e5edfd;
+  --violet: #9a6bcb;
+  --violet-soft: #ede7fb;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-canvas: var(--ws-canvas);
+  --color-surface: var(--ws-surface);
+  --color-muted: var(--ws-muted);
+  --color-border: var(--ws-border);
+  --color-border-subtle: var(--ws-border-2);
+  --color-ink: var(--ws-ink);
+  --color-ink-muted: var(--ws-ink-2);
+  --color-ink-subtle: var(--ws-ink-3);
+  --color-accent: var(--ws-accent);
+  --color-accent-d: var(--ws-accent-d);
+  --color-accent-soft: var(--ws-accent-soft);
+  --color-rail: var(--ws-rail);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --color-violet: var(--violet);
+  --color-violet-soft: var(--violet-soft);
+  --font-sans: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--ws-canvas);
+  color: var(--ws-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+}
+
+a {
+  color: inherit;
+}
+
+@keyframes glowpulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes gradflow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes orbdrift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(18px, -14px) scale(1.08);
+  }
+}
+
+@keyframes bdot {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  40% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.animate-glowpulse {
+  animation: glowpulse 1.8s ease-in-out infinite;
+}
+
+.animate-gradflow {
+  animation: gradflow 5s linear infinite;
+}
+
+.animate-floaty {
+  animation: floaty 5s ease-in-out infinite;
+}
+
+.animate-orbdrift {
+  animation: orbdrift 11s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
