@@ -83,12 +83,12 @@ import { legalCompany } from "@/lib/legal/company";
 export function ContactPageContent() {
   return (
     <>
-      <section className="container-content pt-16 text-center">
+      <section className="container-content pt-10 text-center sm:pt-16">
         <FadeIn>
           <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.08em] text-accent">
             Contact
           </span>
-          <h1 className="mt-3.5 text-[34px] font-bold leading-tight tracking-[-0.02em] text-ink md:text-[42px]">
+          <h1 className="mt-3.5 text-[1.75rem] font-bold leading-tight tracking-[-0.02em] text-ink sm:text-[34px] md:text-[42px]">
             Talk to us
           </h1>
           <p className="mx-auto mt-4 max-w-[min(92vw,640px)] text-[17px] leading-relaxed text-ink-muted lg:text-[18px]">
@@ -98,7 +98,7 @@ export function ContactPageContent() {
         </FadeIn>
       </section>
 
-      <section className="container-wide grid gap-8 pt-12 pb-8 lg:grid-cols-[1fr_minmax(300px,380px)] lg:gap-12">
+      <section className="container-wide grid gap-6 pt-8 pb-8 sm:gap-8 sm:pt-12 lg:grid-cols-[1fr_minmax(300px,380px)] lg:gap-12">
         <FadeIn>
           <ContactForm />
         </FadeIn>

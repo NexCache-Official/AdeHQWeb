@@ -93,8 +93,8 @@ export function PricingCards({
       className={cn(
         "grid gap-5",
         compact
-          ? "mt-10 md:grid-cols-2 xl:grid-cols-4"
-          : "mt-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5",
+          ? "mt-8 grid gap-4 sm:mt-10 md:grid-cols-2 xl:grid-cols-4"
+          : "mt-8 grid gap-4 sm:mt-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5",
       )}
     >
       {visible.map((plan, i) => (
@@ -144,12 +144,12 @@ export function PageHero({
   if (dark || split) {
     return (
       <section className="container-wide pt-8">
-        <div className="relative overflow-hidden rounded-[28px] border border-[#1a2030] bg-gradient-to-br from-[#0C0E13] via-[#141A24] to-[#102A4D] shadow-[0_40px_100px_-40px_rgba(12,14,19,0.5)]">
+        <div className="relative overflow-hidden rounded-[20px] border border-[#1a2030] bg-gradient-to-br from-[#0C0E13] via-[#141A24] to-[#102A4D] shadow-[0_40px_100px_-40px_rgba(12,14,19,0.5)] sm:rounded-[28px]">
           <div className="pointer-events-none absolute inset-0 grid-bg-dark opacity-30" />
           <div className="pointer-events-none absolute -top-[120px] right-0 h-[400px] w-[400px] animate-orbdrift rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.35),transparent_65%)] blur-[24px]" />
           <div className={cn(
-            "relative px-6 py-16 md:px-12 md:py-20",
-            split ? "grid items-center gap-12 lg:grid-cols-2 lg:text-left" : "text-center",
+            "relative px-4 py-12 sm:px-6 sm:py-16 md:px-12 md:py-20",
+            split ? "grid items-center gap-8 lg:grid-cols-2 lg:gap-12 lg:text-left" : "text-center",
           )}>
             <FadeIn className={split ? "" : "container-prose mx-auto"}>
               {eyebrow && (
@@ -159,7 +159,7 @@ export function PageHero({
               )}
               <h1 className={cn(
                 "font-bold leading-[1.06] tracking-[-0.03em] text-white text-balance",
-                split ? "mt-5 text-[36px] md:text-[48px]" : "mt-4 text-[34px] md:text-[52px]",
+                split ? "mt-4 text-[1.75rem] sm:mt-5 sm:text-[36px] md:text-[48px]" : "mt-4 text-[1.75rem] sm:text-[34px] md:text-[52px]",
               )}>
                 {title}
               </h1>
@@ -204,14 +204,14 @@ export function PageHero({
   }
 
   return (
-    <section className="container-content pt-14 pb-4">
+    <section className="container-content pt-10 pb-4 sm:pt-14">
       <FadeIn>
         {eyebrow && (
           <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-accent">
             {eyebrow}
           </span>
         )}
-        <h1 className="mt-4 text-[36px] font-bold leading-[1.08] tracking-[-0.03em] text-ink text-balance md:text-[48px] lg:text-[52px]">
+        <h1 className="mt-4 text-[1.75rem] font-bold leading-[1.08] tracking-[-0.03em] text-ink text-balance sm:text-[36px] md:text-[48px] lg:text-[52px]">
           {title}
         </h1>
         {description && (

@@ -38,7 +38,7 @@ const rest = platformFeatures.slice(4);
 
 export function PlatformGrid() {
   return (
-    <section className="container-wide pt-20 pb-4">
+    <section className="container-wide pt-14 pb-4 sm:pt-20">
       <SectionHeader
         eyebrow="Platform"
         title="Everything you need to run an AI-native company"
@@ -46,7 +46,7 @@ export function PlatformGrid() {
         action={<InlineCta href="/product" label="Full platform tour" />}
       />
 
-      <div className="mt-12 grid gap-4 md:grid-cols-12">
+      <div className="mt-8 grid gap-3 sm:mt-12 sm:gap-4 md:grid-cols-12">
         {featured.map((feat, i) => {
           const Icon = iconMap[feat.icon as keyof typeof iconMap] ?? Users;
           const spans = [

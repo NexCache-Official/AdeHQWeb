@@ -142,7 +142,7 @@ export function SolutionSection() {
         description="In AdeHQ you don't pick a model — you hire an employee. Each AI worker has a name, role, personality, memory, tools, and weekly capacity."
         action={<InlineCta href="/product" label="Platform tour" />}
       />
-      <div className="mt-12 grid gap-4 lg:grid-cols-[1.15fr_1fr]">
+      <div className="mt-8 grid gap-4 lg:grid-cols-[1.15fr_1fr] lg:mt-12">
         <BentoPanel dark className="min-h-[320px]" href="/product">
           <span className="font-mono text-[10px] uppercase tracking-wider text-white/60">
             Core idea
@@ -210,10 +210,10 @@ export function HumanAiSection() {
     <section className="container-wide pt-24">
       <div className="relative overflow-hidden rounded-[26px] bg-gradient-to-br from-[#0C0E13] to-[#141A24] shadow-[0_30px_70px_-34px_rgba(40,30,15,0.55)]">
         <div className="pointer-events-none absolute -top-[90px] -left-10 h-[340px] w-[340px] animate-orbdrift rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.3),transparent_64%)] blur-[20px]" />
-        <div className="relative grid items-center gap-11 p-[34px_22px] md:grid-cols-[1.05fr_0.95fr] md:p-[52px_50px]">
+        <div className="relative grid items-center gap-8 p-5 sm:gap-11 sm:p-[34px_22px] md:grid-cols-[1.05fr_0.95fr] md:p-[52px_50px]">
           <FadeIn>
             <Eyebrow className="text-[#5B93F6]">Human + AI</Eyebrow>
-            <h2 className="mt-3.5 text-[34px] font-bold leading-[1.14] tracking-[-0.02em] text-white text-balance">
+            <h2 className="mt-3.5 text-[1.625rem] font-bold leading-[1.14] tracking-[-0.02em] text-white text-balance sm:text-[34px]">
               Bring your whole team. Put AI to work beside them.
             </h2>
             <p className="mt-4 max-w-[480px] text-[16.5px] leading-relaxed text-white/80">
@@ -509,11 +509,11 @@ export function UseCasesSection() {
           title="What teams build with AdeHQ"
           action={<InlineCta href="/use-cases" label="All use cases" />}
         />
-        <div className="mt-12 grid gap-4 lg:grid-cols-12">
+        <div className="mt-10 grid gap-4 lg:grid-cols-12">
           <FadeIn className="lg:col-span-5">
             <Link
               href="/use-cases#launch"
-              className="group flex h-full min-h-[280px] flex-col justify-end overflow-hidden rounded-[24px] bg-gradient-to-br from-[#0C0E13] to-[#1e3a5f] p-8 no-underline"
+              className="group flex h-full min-h-[220px] flex-col justify-end overflow-hidden rounded-[20px] bg-gradient-to-br from-[#0C0E13] to-[#1e3a5f] p-6 no-underline sm:min-h-[280px] sm:rounded-[24px] sm:p-8"
             >
               <span className="mb-auto inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 font-mono text-sm font-bold text-white">
                 {featured.code}
@@ -560,8 +560,9 @@ export function ComparisonSection() {
         eyebrow="Why AdeHQ"
         title="Not another chatbot. Pay for work, not seats."
       />
-      <FadeIn className="mt-9 overflow-hidden rounded-[20px] border border-border bg-white shadow-[0_1px_3px_rgba(40,30,15,0.06)]">
-        <div className="overflow-x-auto">
+      <FadeIn className="mt-8 overflow-hidden rounded-[20px] border border-border bg-white shadow-[0_1px_3px_rgba(40,30,15,0.06)] sm:mt-9">
+        <p className="table-scroll-hint px-4 pt-3">Swipe to compare →</p>
+        <div className="table-scroll">
           <table className="w-full min-w-[640px] border-collapse text-[13.5px]">
             <thead>
               <tr className="bg-muted">

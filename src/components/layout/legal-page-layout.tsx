@@ -31,7 +31,7 @@ export function LegalPageLayout({
   return (
     <>
       <section className="border-b border-border bg-muted/40">
-        <div className="container-legal py-14">
+        <div className="container-legal py-10 sm:py-14">
           <FadeIn>
             <Link
               href="/"
@@ -43,7 +43,7 @@ export function LegalPageLayout({
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-accent">
               Legal · {legalCompany.tradingName}
             </p>
-            <h1 className="mt-3 text-[34px] font-bold tracking-[-0.025em] text-ink md:text-[40px]">
+            <h1 className="mt-3 text-[1.75rem] font-bold tracking-[-0.025em] text-ink sm:text-[34px] md:text-[40px]">
               {title}
             </h1>
             {effectiveDate && (

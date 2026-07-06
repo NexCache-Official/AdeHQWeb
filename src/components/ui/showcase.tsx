@@ -69,7 +69,7 @@ export function ProcessRail({
   steps: { n: string; title: string; body: string }[];
 }) {
   return (
-    <div className="relative mt-12">
+      <div className="relative mt-10 sm:mt-12">
       <div className="absolute top-[22px] right-[8%] left-[8%] hidden h-px bg-border md:block" />
       <div className="grid gap-8 md:grid-cols-3 md:gap-6">
         {steps.map((step, i) => (
@@ -101,7 +101,7 @@ export function PainList({
     <div className="mt-12 divide-y divide-border rounded-[24px] border border-border bg-white">
       {items.map((item, i) => (
         <FadeIn key={item.title} delay={i * 0.04}>
-          <div className="flex flex-col gap-4 p-6 sm:flex-row sm:items-start sm:gap-6 md:p-8">
+          <div className="flex flex-col gap-3 p-4 sm:flex-row sm:items-start sm:gap-6 sm:p-6 md:p-8">
             <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#FEF2F2] text-danger">
               {item.icon}
             </span>

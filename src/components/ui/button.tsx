@@ -26,9 +26,9 @@ const variants = {
 };
 
 const sizes = {
-  sm: "h-[38px] px-4 text-sm rounded-[11px]",
-  md: "h-[44px] px-5 text-sm rounded-[12px]",
-  lg: "h-[48px] px-6 text-[15px] rounded-[14px]",
+  sm: "h-[40px] min-h-[40px] px-4 text-sm rounded-[11px]",
+  md: "h-[44px] min-h-[44px] px-5 text-sm rounded-[12px]",
+  lg: "h-[48px] min-h-[48px] px-6 text-[15px] rounded-[14px] sm:h-[48px]",
 };
 
 export function Button({

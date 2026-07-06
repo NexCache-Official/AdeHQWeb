@@ -164,7 +164,7 @@ export function SectionHeader({
       >
         <div className={align === "center" ? "text-center" : ""}>
           {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-          <h2 className="mt-4 text-[32px] font-bold leading-[1.12] tracking-[-0.025em] text-ink text-balance md:text-[42px]">
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.12] tracking-[-0.025em] text-ink text-balance sm:text-[32px] md:text-[42px]">
             {title}
           </h2>
           {description && (

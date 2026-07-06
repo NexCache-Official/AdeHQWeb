@@ -69,7 +69,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
 
   return (
     <footer className="mt-24 bg-rail text-white">
-      <div className="container-wide grid gap-10 pt-16 pb-8 lg:grid-cols-[1.4fr_repeat(4,1fr)] lg:gap-8">
+      <div className="container-wide grid gap-8 pt-12 pb-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)] lg:pt-16">
         <div>
           <div className="mb-4 flex items-center gap-2.5">
             <Logo />

@@ -39,11 +39,11 @@ export function ResourcesStrip() {
       <FadeIn>
         <div className="overflow-hidden rounded-[24px] border border-border bg-gradient-to-br from-white via-white to-accent-soft/30">
           <div className="grid md:grid-cols-[1fr_1.6fr]">
-            <div className="border-b border-border p-8 md:border-r md:border-b-0 lg:p-10">
+            <div className="border-b border-border p-5 sm:p-8 md:border-r md:border-b-0 lg:p-10">
               <div className="font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-accent">
                 Resources
               </div>
-              <h2 className="mt-3 text-[28px] font-bold tracking-[-0.02em] text-ink md:text-[32px]">
+              <h2 className="mt-3 text-[1.375rem] font-bold tracking-[-0.02em] text-ink sm:text-[28px] md:text-[32px]">
                 Learn, evaluate, and deploy with confidence
               </h2>
               <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">

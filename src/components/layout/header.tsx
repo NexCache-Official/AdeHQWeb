@@ -107,10 +107,10 @@ export function Header() {
     <>
       <AnnouncementBar />
       <header className="sticky top-0 z-50 border-b border-border bg-white/90 backdrop-blur-xl">
-        <div className="container-wide flex h-[68px] items-center justify-between gap-8">
-          <Link href="/" className="flex shrink-0 items-center gap-2.5 no-underline">
+        <div className="container-wide flex h-14 items-center justify-between gap-3 sm:h-[68px] sm:gap-8">
+          <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2 no-underline sm:gap-2.5">
             <Logo />
-            <span className="text-[18px] font-bold tracking-[-0.02em] text-ink">
+            <span className="truncate text-[16px] font-bold tracking-[-0.02em] text-ink sm:text-[18px]">
               AdeHQ
             </span>
           </Link>
@@ -151,8 +151,9 @@ export function Header() {
             <Button href="/contact" variant="ghost" size="sm" className="hidden xl:inline-flex">
               Book a demo
             </Button>
-            <Button href="/pricing" size="sm" className="hidden sm:inline-flex">
-              Start free
+            <Button href="/pricing" size="sm" className="inline-flex">
+              <span className="hidden min-[400px]:inline">Start free</span>
+              <span className="min-[400px]:hidden">Free</span>
             </Button>
             <button
               type="button"

@@ -96,13 +96,13 @@ export default function UseCasesPage() {
         description="From solo founders to AI-native agencies — one workspace for research, sales, marketing, operations, and client delivery."
       />
 
-      <section className="container-wide pt-12">
-        <div className="flex flex-wrap gap-2">
+      <section className="container-wide pt-8 sm:pt-12">
+        <div className="table-scroll flex gap-2 pb-1">
           {expandedUseCases.map((uc) => (
             <Link
               key={uc.id}
               href={`#${uc.id}`}
-              className="rounded-full border border-border bg-white px-4 py-2 text-[13px] font-semibold text-ink-muted no-underline transition-colors hover:border-accent hover:text-accent"
+              className="shrink-0 rounded-full border border-border bg-white px-3.5 py-2 text-[12.5px] font-semibold text-ink-muted no-underline transition-colors hover:border-accent hover:text-accent sm:px-4 sm:text-[13px]"
             >
               {uc.title}
             </Link>
@@ -140,13 +140,13 @@ export default function UseCasesPage() {
             <FadeIn key={uc.id} delay={0.02}>
               <article
                 id={uc.id}
-                className="scroll-mt-28 grid gap-10 border-t border-border pt-16 lg:grid-cols-[280px_1fr]"
+                className="scroll-mt-24 grid gap-8 border-t border-border pt-12 sm:scroll-mt-28 sm:gap-10 sm:pt-16 lg:grid-cols-[280px_1fr]"
               >
                 <div className="lg:sticky lg:top-28 lg:self-start">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-rail font-mono text-sm font-bold text-white">
                     {uc.code}
                   </span>
-                  <h2 className="mt-4 text-[28px] font-bold tracking-[-0.02em] text-ink md:text-[32px]">
+                  <h2 className="mt-4 text-[1.5rem] font-bold tracking-[-0.02em] text-ink sm:text-[28px] md:text-[32px]">
                     {uc.title}
                   </h2>
                   <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
@@ -161,7 +161,7 @@ export default function UseCasesPage() {
                     {uc.steps.map((step, j) => (
                       <li
                         key={step}
-                        className="flex gap-5 px-6 py-5"
+                        className="flex gap-3 px-4 py-4 sm:gap-5 sm:px-6 sm:py-5"
                       >
                         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-soft font-mono text-[11px] font-bold text-accent">
                           {j + 1}

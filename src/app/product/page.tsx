@@ -136,12 +136,12 @@ export default function ProductPage() {
           <div className="mt-12 space-y-0 divide-y divide-border rounded-[24px] border border-border bg-white overflow-hidden">
             {orchestrationModes.map((m, i) => (
               <FadeIn key={m.name} delay={i * 0.03}>
-                <div className="grid items-center gap-4 px-6 py-5 md:grid-cols-[200px_140px_1fr] md:gap-8 md:px-8">
-                  <span className="text-[16px] font-bold text-ink">{m.name}</span>
-                  <code className="w-fit rounded-lg bg-accent-soft px-3 py-1.5 font-mono text-[12px] font-semibold text-accent-d">
+                <div className="grid items-start gap-3 px-4 py-4 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-4 sm:px-6 sm:py-5 md:grid-cols-[minmax(0,140px)_minmax(0,120px)_1fr] md:gap-8 md:px-8">
+                  <span className="text-[15px] font-bold text-ink sm:text-[16px]">{m.name}</span>
+                  <code className="w-fit rounded-lg bg-accent-soft px-3 py-1.5 font-mono text-[11px] font-semibold text-accent-d sm:text-[12px]">
                     {m.cmd}
                   </code>
-                  <span className="text-[14px] leading-relaxed text-ink-muted">
+                  <span className="text-[13.5px] leading-relaxed text-ink-muted sm:text-[14px] md:col-span-1">
                     {m.desc}
                   </span>
                 </div>

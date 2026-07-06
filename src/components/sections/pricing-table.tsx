@@ -12,8 +12,9 @@ const columns = [
 
 export function PricingComparisonTable() {
   return (
-    <FadeIn className="mt-12 overflow-hidden rounded-[20px] border border-border bg-white shadow-[0_1px_3px_rgba(40,30,15,0.06)]">
-      <div className="overflow-x-auto">
+    <FadeIn className="mt-8 overflow-hidden rounded-[20px] border border-border bg-white shadow-[0_1px_3px_rgba(40,30,15,0.06)] sm:mt-12">
+      <p className="table-scroll-hint px-4 pt-3">Swipe to compare plans →</p>
+      <div className="table-scroll">
         <table className="w-full min-w-[900px] border-collapse text-[13px]">
           <thead>
             <tr className="border-b border-border-subtle bg-canvas">
