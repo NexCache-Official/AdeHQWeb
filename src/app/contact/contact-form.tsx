@@ -83,7 +83,7 @@ import { legalCompany } from "@/lib/legal/company";
 export function ContactPageContent() {
   return (
     <>
-      <section className="mx-auto max-w-[820px] px-7 pt-16 text-center">
+      <section className="container-content pt-16 text-center">
         <FadeIn>
           <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.08em] text-accent">
             Contact
@@ -91,14 +91,14 @@ export function ContactPageContent() {
           <h1 className="mt-3.5 text-[34px] font-bold leading-tight tracking-[-0.02em] text-ink md:text-[42px]">
             Talk to us
           </h1>
-          <p className="mx-auto mt-4 max-w-[560px] text-[17px] leading-relaxed text-ink-muted">
+          <p className="mx-auto mt-4 max-w-[min(92vw,640px)] text-[17px] leading-relaxed text-ink-muted lg:text-[18px]">
             Questions about AdeHQ, pricing, or partnerships? We&apos;d love to
             hear from you.
           </p>
         </FadeIn>
       </section>
 
-      <section className="mx-auto grid max-w-[960px] gap-8 px-7 pt-12 pb-8 md:grid-cols-[1fr_340px]">
+      <section className="container-wide grid gap-8 pt-12 pb-8 lg:grid-cols-[1fr_minmax(300px,380px)] lg:gap-12">
         <FadeIn>
           <ContactForm />
         </FadeIn>

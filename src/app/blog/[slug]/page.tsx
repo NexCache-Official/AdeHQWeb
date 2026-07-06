@@ -55,7 +55,7 @@ export default async function BlogPostPage({
 
   return (
     <>
-      <article className="mx-auto max-w-[720px] px-7 pt-16 pb-8">
+      <article className="container-prose px-[var(--container-padding)] pt-16 pb-8">
         <Link
           href="/blog"
           className="text-sm font-medium text-ink-muted hover:text-accent"

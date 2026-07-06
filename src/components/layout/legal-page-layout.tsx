@@ -31,7 +31,7 @@ export function LegalPageLayout({
   return (
     <>
       <section className="border-b border-border bg-muted/40">
-        <div className="container-wide max-w-[800px] py-14">
+        <div className="container-legal py-14">
           <FadeIn>
             <Link
               href="/"
@@ -63,7 +63,7 @@ export function LegalPageLayout({
           </FadeIn>
         </div>
       </section>
-      <article className="container-wide max-w-[800px] py-12 pb-20">
+      <article className="container-legal py-12 pb-20">
         <FadeIn>{children}</FadeIn>
         <div className="mt-14 border-t border-border pt-8">
           <p className="mb-3 font-mono text-[10px] font-semibold uppercase tracking-wider text-ink-subtle">

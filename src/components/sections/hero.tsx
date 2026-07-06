@@ -71,7 +71,7 @@ export function HeroSection() {
                   with an AI workforce — and your whole team.
                 </h1>
 
-                <p className="mt-6 max-w-[560px] text-[18px] leading-relaxed text-white/78">
+                <p className="mt-6 max-w-[min(92vw,600px)] text-[18px] leading-relaxed text-white/78 lg:text-[19px]">
                   Invite unlimited humans. Hire unlimited AI employees. AdeHQ meters
                   only active AI work through weekly AI Work Hours — not seats, not
                   tokens.

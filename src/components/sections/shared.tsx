@@ -151,7 +151,7 @@ export function PageHero({
             "relative px-6 py-16 md:px-12 md:py-20",
             split ? "grid items-center gap-12 lg:grid-cols-2 lg:text-left" : "text-center",
           )}>
-            <FadeIn className={split ? "" : "mx-auto max-w-[800px]"}>
+            <FadeIn className={split ? "" : "container-prose mx-auto"}>
               {eyebrow && (
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.1em] text-[#93C5FD]">
                   {eyebrow}
@@ -166,7 +166,7 @@ export function PageHero({
               {description && (
                 <p className={cn(
                   "mt-5 text-[17px] leading-relaxed text-white/85",
-                  split ? "max-w-[520px]" : "mx-auto max-w-[600px]",
+                  split ? "max-w-[min(92vw,560px)]" : "mx-auto max-w-[min(92vw,680px)]",
                 )}>
                   {description}
                 </p>
@@ -204,18 +204,18 @@ export function PageHero({
   }
 
   return (
-    <section className="container-wide pt-14 pb-4">
-      <FadeIn className="max-w-[860px]">
+    <section className="container-content pt-14 pb-4">
+      <FadeIn>
         {eyebrow && (
           <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-accent">
             {eyebrow}
           </span>
         )}
-        <h1 className="mt-4 text-[36px] font-bold leading-[1.08] tracking-[-0.03em] text-ink text-balance md:text-[48px]">
+        <h1 className="mt-4 text-[36px] font-bold leading-[1.08] tracking-[-0.03em] text-ink text-balance md:text-[48px] lg:text-[52px]">
           {title}
         </h1>
         {description && (
-          <p className="mt-5 max-w-[620px] text-[18px] leading-relaxed text-ink-muted">
+          <p className="mt-5 max-w-[min(92vw,720px)] text-[18px] leading-relaxed text-ink-muted lg:text-[19px]">
             {description}
           </p>
         )}

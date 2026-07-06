@@ -594,11 +594,13 @@ export function ComparisonSection() {
 
 export function FaqSection() {
   return (
-    <section className="container-wide max-w-[760px] pt-24">
-      <SectionHeader eyebrow="FAQ" title="Questions, answered." />
-      <FadeIn className="mt-9">
-        <FaqAccordion items={homeFaqs} />
-      </FadeIn>
+    <section className="container-wide pt-24">
+      <div className="container-prose mx-auto">
+        <SectionHeader eyebrow="FAQ" title="Questions, answered." />
+        <FadeIn className="mt-9">
+          <FaqAccordion items={homeFaqs} />
+        </FadeIn>
+      </div>
     </section>
   );
 }

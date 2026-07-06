@@ -26,7 +26,12 @@
   --violet: #9a6bcb;
   --violet-soft: #ede7fb;
   --ease-out: cubic-bezier(0.2, 0.7, 0.3, 1);
-  --container-wide: 1440px;
+  --container-max: min(96vw, 1680px);
+  --container-content: min(92vw, 1120px);
+  --container-prose: min(88vw, 960px);
+  --container-legal: min(90vw, 920px);
+  --container-padding: clamp(1.25rem, 3.5vw, 3rem);
+  --container-wide: var(--container-max);
 }
 
 @theme inline {
@@ -84,17 +89,52 @@ a:not([class*="text-"]):not([class*="bg-"]) {
 
 .container-wide {
   width: 100%;
-  max-width: var(--container-wide);
+  max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-content {
+  width: 100%;
+  max-width: var(--container-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-prose {
+  width: 100%;
+  max-width: var(--container-prose);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-legal {
+  width: 100%;
+  max-width: var(--container-legal);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --container-max: min(94vw, 1760px);
+    --container-content: min(90vw, 1280px);
+    --container-prose: min(86vw, 1040px);
+  }
 }
 
 @media (min-width: 1280px) {
-  .container-wide {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+  .container-wide,
+  .container-content,
+  .container-legal {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
   }
 }
 

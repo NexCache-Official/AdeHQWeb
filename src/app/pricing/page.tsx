@@ -142,11 +142,13 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="container-wide max-w-[760px] pt-24">
-        <SectionHeader eyebrow="FAQ" title="Pricing questions" />
-        <FadeIn className="mt-8">
-          <FaqAccordion items={pricingFaqs} />
-        </FadeIn>
+      <section className="container-wide pt-24">
+        <div className="container-prose mx-auto">
+          <SectionHeader eyebrow="FAQ" title="Pricing questions" />
+          <FadeIn className="mt-8">
+            <FaqAccordion items={pricingFaqs} />
+          </FadeIn>
+        </div>
       </section>
 
       <DarkCta

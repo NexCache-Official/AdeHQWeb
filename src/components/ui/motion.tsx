@@ -150,7 +150,9 @@ export function SectionHeader({
   return (
     <FadeIn
       className={cn(
-        align === "center" ? "mx-auto max-w-[800px] text-center" : "max-w-[720px]",
+        align === "center"
+          ? "container-prose mx-auto text-center"
+          : "container-prose",
         className,
       )}
     >

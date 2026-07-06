@@ -1,19 +1,24 @@
 import { cn } from "@/lib/utils";
 
-export function Container({
-  children,
-  className,
-  wide = true,
-}: {
+type ContainerProps = {
   children: React.ReactNode;
   className?: string;
-  wide?: boolean;
-}) {
-  return (
-    <div className={cn(wide ? "container-wide" : "mx-auto max-w-[960px] px-7", className)}>
-      {children}
-    </div>
-  );
+};
+
+export function Container({ children, className }: ContainerProps) {
+  return <div className={cn("container-wide", className)}>{children}</div>;
+}
+
+export function ContainerContent({ children, className }: ContainerProps) {
+  return <div className={cn("container-content", className)}>{children}</div>;
+}
+
+export function ContainerProse({ children, className }: ContainerProps) {
+  return <div className={cn("container-prose", className)}>{children}</div>;
+}
+
+export function ContainerLegal({ children, className }: ContainerProps) {
+  return <div className={cn("container-legal", className)}>{children}</div>;
 }
 
 export function SectionShell({

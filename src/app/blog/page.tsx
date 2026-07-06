@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <section className="mx-auto max-w-[820px] px-7 pt-16 text-center">
+      <section className="container-content pt-16 text-center">
         <FadeIn>
           <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.08em] text-accent">
             Blog
@@ -27,7 +27,7 @@ export default function BlogPage() {
         </FadeIn>
       </section>
 
-      <section className="mx-auto max-w-[900px] px-7 pt-12 pb-4">
+      <section className="container-content pt-12 pb-4">
         <div className="flex flex-col gap-4">
           {blogPosts.map((post, i) => (
             <FadeIn key={post.slug} delay={i * 0.04}>

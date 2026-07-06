@@ -19,7 +19,7 @@ const perks = [
 export default function CareersPage() {
   return (
     <>
-      <section className="mx-auto max-w-[820px] px-7 pt-16 text-center">
+      <section className="container-content pt-16 text-center">
         <FadeIn>
           <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.08em] text-accent">
             Careers
@@ -35,7 +35,7 @@ export default function CareersPage() {
         </FadeIn>
       </section>
 
-      <section className="mx-auto max-w-[760px] px-7 pt-12">
+      <section className="container-content pt-12">
         <FadeIn>
           <div className="rounded-[20px] border border-border bg-white p-6 shadow-[0_1px_3px_rgba(40,30,15,0.06)]">
             <h2 className="text-lg font-bold text-ink">Why AdeHQ</h2>
@@ -51,7 +51,7 @@ export default function CareersPage() {
         </FadeIn>
       </section>
 
-      <section className="mx-auto max-w-[900px] px-7 pt-12 pb-4">
+      <section className="container-content pt-12 pb-4">
         <h2 className="mb-6 text-center text-xl font-bold text-ink">
           Open roles
         </h2>
