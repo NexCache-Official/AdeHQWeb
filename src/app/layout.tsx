@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s · AdeHQ",
   },
   description:
-    "Hire and manage AI employees alongside your human team. Roles, rooms, memory, tasks, approvals, and work logs — in one workspace.",
+    "Hire an AI workforce. Invite your whole team. Unlimited humans and unlimited AI employees — pay for work, not seats.",
   openGraph: {
     title: "AdeHQ — Your AI Workforce Workspace",
     description:
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full scroll-smooth">
-      <body className="min-h-full flex flex-col bg-canvas font-sans text-ink antialiased">
+      <body className="min-h-full flex flex-col bg-white font-sans text-ink antialiased">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

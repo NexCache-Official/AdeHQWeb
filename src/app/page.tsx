@@ -1,4 +1,7 @@
 import { HeroSection } from "@/components/sections/hero";
+import { LogoMarquee } from "@/components/sections/logo-marquee";
+import { PlatformGrid } from "@/components/sections/platform-grid";
+import { ResourcesStrip } from "@/components/sections/resources-strip";
 import {
   ComparisonSection,
   FaqSection,
@@ -12,13 +15,16 @@ import {
   TrustStrip,
   UseCasesSection,
 } from "@/components/sections/home-sections";
-import { PricingCards } from "@/components/sections/shared";
+import { PricingCards, NoSeatBanner } from "@/components/sections/shared";
 import { SectionHeader } from "@/components/ui/motion";
+import { pricingPositioning } from "@/lib/data";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <LogoMarquee />
+      <PlatformGrid />
       <TrustStrip />
       <ProblemSection />
       <SolutionSection />
@@ -27,17 +33,15 @@ export default function HomePage() {
       <HowItWorksSection />
       <ProductHighlightsSection />
       <UseCasesSection />
-      <section id="pricing" className="mx-auto max-w-[1180px] scroll-mt-[74px] px-7 pt-24">
+      <ResourcesStrip />
+      <section id="pricing" className="container-wide scroll-mt-[90px] pt-24">
         <SectionHeader
           eyebrow="Pricing"
-          title="Start free. Scale when your workforce grows."
+          title={pricingPositioning.headline}
+          description={pricingPositioning.subheadline}
         />
-        <PricingCards compact />
-        <p className="mx-auto mt-5 max-w-[640px] text-center text-[13px] leading-relaxed text-ink-subtle">
-          Human messaging is generous. Hosted AI usage is governed by AI Work
-          Hours — capacity you can understand, no token math. BYOK coming for
-          technical users.
-        </p>
+        <PricingCards compact limit={4} />
+        <NoSeatBanner />
       </section>
       <ComparisonSection />
       <FinalCtaSection />

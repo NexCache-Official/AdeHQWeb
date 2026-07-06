@@ -13,6 +13,12 @@ import { Button } from "@/components/ui/button";
 import { FaqAccordion } from "@/components/ui/faq";
 import { FadeIn, Eyebrow, SectionHeader } from "@/components/ui/motion";
 import {
+  BentoPanel,
+  InlineCta,
+  PainList,
+  ProcessRail,
+} from "@/components/ui/showcase";
+import {
   compareColor,
   comparison,
   homeFaqs,
@@ -85,7 +91,7 @@ export function TrustStrip() {
     "Startup teams",
   ];
   return (
-    <section className="mx-auto max-w-[920px] px-7 pt-9 pb-2 text-center">
+    <section className="container-wide pt-9 pb-2 text-center">
       <p className="text-[15px] leading-relaxed text-ink-muted text-balance">
         For solo founders, freelancers, agencies, and AI-native teams who need{" "}
         <strong className="font-semibold text-ink">
@@ -109,69 +115,79 @@ export function TrustStrip() {
 
 export function ProblemSection() {
   return (
-    <section className="mx-auto max-w-[1180px] px-7 pt-20">
+    <section className="container-wide pt-20">
       <SectionHeader
+        align="left"
         eyebrow="The problem"
         title="AI is powerful. Your workflow is fragmented."
         description="Most founders use ChatGPT for writing, Claude for planning, Cursor for code, Perplexity for research, Slack for chat, Notion for docs, and Linear for tasks. Nothing remembers your business. Nothing coordinates. Nothing is accountable."
       />
-      <div className="mt-9 grid gap-4 md:grid-cols-3">
-        {problemCards.map((card, i) => (
-          <FadeIn key={card.title} delay={i * 0.05}>
-            <div className="rounded-[18px] border border-border bg-white p-6 shadow-[0_1px_3px_rgba(40,30,15,0.06)]">
-              <span
-                className={cn(
-                  "mb-3.5 inline-flex h-[38px] w-[38px] items-center justify-center rounded-[11px]",
-                  card.bg,
-                  card.color,
-                )}
-              >
-                <card.icon size={19} strokeWidth={1.9} />
-              </span>
-              <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-ink">
-                {card.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">
-                {card.body}
-              </p>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
+      <PainList
+        items={problemCards.map((card) => ({
+          icon: <card.icon size={22} strokeWidth={1.8} />,
+          title: card.title,
+          body: card.body,
+        }))}
+      />
     </section>
   );
 }
 
 export function SolutionSection() {
   return (
-    <section id="product" className="mx-auto max-w-[1180px] scroll-mt-[74px] px-7 pt-24">
+    <section id="product" className="container-wide scroll-mt-[90px] pt-24">
       <SectionHeader
         eyebrow="The solution"
         title="One workspace. A full AI workforce."
         description="In AdeHQ you don't pick a model — you hire an employee. Each AI worker has a name, role, personality, memory, tools, and weekly capacity."
+        action={<InlineCta href="/product" label="Platform tour" />}
       />
-      <div className="mt-9 grid gap-4 md:grid-cols-2">
-        {solutionCards.map((card, i) => (
-          <FadeIn key={card.title} delay={i * 0.05}>
-            <div className="rounded-[20px] border border-border bg-white p-7 shadow-[0_1px_3px_rgba(40,30,15,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#cbd0da] hover:shadow-[0_12px_30px_-14px_rgba(40,34,24,0.22)]">
+      <div className="mt-12 grid gap-4 lg:grid-cols-[1.15fr_1fr]">
+        <BentoPanel dark className="min-h-[320px]" href="/product">
+          <span className="font-mono text-[10px] uppercase tracking-wider text-white/60">
+            Core idea
+          </span>
+          <h3 className="mt-3 text-[26px] font-bold leading-tight md:text-[32px]">
+            Hire employees, not models
+          </h3>
+          <p className="mt-3 max-w-[480px] text-[15px] leading-relaxed text-white/80">
+            Describe the role. Meet candidates. Hire Eleanor Price, Finance PR
+            Manager — with memory, personality, and accountability built in.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {["Research", "Sales", "Marketing", "Ops"].map((tag) => (
               <span
-                className={cn(
-                  "mb-4 inline-flex h-[42px] w-[42px] items-center justify-center rounded-xl",
-                  card.bg,
-                  card.color,
-                )}
+                key={tag}
+                className="rounded-lg bg-white/10 px-3 py-1.5 font-mono text-[11px] text-white"
               >
-                <card.icon size={21} strokeWidth={1.8} />
+                {tag}
               </span>
-              <h3 className="text-[19px] font-bold tracking-[-0.01em] text-ink">
-                {card.title}
-              </h3>
-              <p className="mt-1.5 text-[14.5px] leading-relaxed text-ink-muted">
-                {card.body}
-              </p>
-            </div>
-          </FadeIn>
-        ))}
+            ))}
+          </div>
+        </BentoPanel>
+        <div className="flex flex-col gap-4">
+          {solutionCards.slice(1).map((card) => (
+            <BentoPanel key={card.title} className="flex-1" href="/product">
+              <div className="flex items-start gap-4">
+                <span
+                  className={cn(
+                    "inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl",
+                    card.bg,
+                    card.color,
+                  )}
+                >
+                  <card.icon size={20} strokeWidth={1.8} />
+                </span>
+                <div>
+                  <h3 className="text-[17px] font-bold text-ink">{card.title}</h3>
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-ink-muted">
+                    {card.body}
+                  </p>
+                </div>
+              </div>
+            </BentoPanel>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -185,13 +201,13 @@ export function HumanAiSection() {
     { initials: "MR", name: "Marcus Reed", role: "Sales", ai: true, gradient: "indigo" as const },
   ];
   const checks = [
-    "Humans and AI share rooms, @mentions, tasks, and approvals.",
-    "You stay in control — every external action waits for human sign-off.",
-    "Scale the AI side up or down — you never pay per human seat.",
+    "Unlimited human members on every plan — invite your whole team.",
+    "Unlimited AI employees — hire as many roles as you need.",
+    "You only pay for AI Work Hours — the actual work your workforce performs.",
   ];
 
   return (
-    <section className="mx-auto max-w-[1180px] px-7 pt-24">
+    <section className="container-wide pt-24">
       <div className="relative overflow-hidden rounded-[26px] bg-gradient-to-br from-[#0C0E13] to-[#141A24] shadow-[0_30px_70px_-34px_rgba(40,30,15,0.55)]">
         <div className="pointer-events-none absolute -top-[90px] -left-10 h-[340px] w-[340px] animate-orbdrift rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.3),transparent_64%)] blur-[20px]" />
         <div className="relative grid items-center gap-11 p-[34px_22px] md:grid-cols-[1.05fr_0.95fr] md:p-[52px_50px]">
@@ -204,10 +220,13 @@ export function HumanAiSection() {
               AdeHQ isn&apos;t AI-only. Invite your existing colleagues,
               co-founders, and clients —{" "}
               <strong className="font-semibold text-white">
-                unlimited human seats, always free
+                unlimited human members, always free
               </strong>{" "}
-              — and let AI employees research, draft, and execute right
-              alongside them.
+              — and hire{" "}
+              <strong className="font-semibold text-white">
+                unlimited AI employees
+              </strong>{" "}
+              to work right alongside them.
             </p>
             <div className="mt-6 flex flex-col gap-3">
               {checks.map((c) => (
@@ -225,7 +244,7 @@ export function HumanAiSection() {
               </span>
               <span>
                 <span className="block text-[13px] font-semibold text-white">
-                  Unlimited human seats
+                  Unlimited human members
                 </span>
                 <span className="block text-[11.5px] text-white/72">
                   Included on every plan — even Free
@@ -293,7 +312,7 @@ export function HumanAiSection() {
 
 export function StatsBand() {
   return (
-    <section className="mx-auto max-w-[1180px] px-7 pt-16">
+    <section className="container-wide pt-16">
       <div className="relative grid overflow-hidden rounded-[20px] border border-border bg-white shadow-[0_1px_3px_rgba(40,30,15,0.06)] md:grid-cols-4">
         <div className="absolute top-0 right-0 left-0 h-[3px] animate-gradflow bg-gradient-to-r from-accent via-[#5B93F6] to-accent bg-[length:200%_100%]" />
         {stats.map((stat, i) => (
@@ -335,30 +354,14 @@ export function HowItWorksSection() {
   ];
 
   return (
-    <section id="how" className="mx-auto max-w-[1180px] scroll-mt-[74px] px-7 pt-24">
+    <section id="how" className="container-wide scroll-mt-[90px] pt-24">
       <SectionHeader
         eyebrow="How it works"
         title="From job description to working teammate in minutes."
       />
-      <div className="mt-10 grid gap-4 md:grid-cols-3">
-        {steps.map((step, i) => (
-          <FadeIn key={step.n} delay={i * 0.05}>
-            <div className="rounded-[18px] border border-border bg-white p-6 shadow-[0_1px_3px_rgba(40,30,15,0.06)]">
-              <span className="rounded-lg bg-accent-soft px-2.5 py-1 font-mono text-[13px] font-semibold text-accent">
-                {step.n}
-              </span>
-              <h3 className="mt-4 text-lg font-bold tracking-[-0.01em] text-ink">
-                {step.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">
-                {step.body}
-              </p>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
-      <div className="mt-7 text-center">
-        <Button href="/pricing" variant="secondary" size="lg">
+      <ProcessRail steps={steps} />
+      <div className="mt-10">
+        <Button href="/pricing" size="lg">
           Try the hiring experience
         </Button>
       </div>
@@ -368,7 +371,7 @@ export function HowItWorksSection() {
 
 export function ProductHighlightsSection() {
   return (
-    <section className="mx-auto max-w-[1180px] px-7 pt-24">
+    <section className="container-wide pt-24">
       <FadeIn className="grid items-center gap-12 md:grid-cols-2">
         <div>
           <Eyebrow>Orchestration</Eyebrow>
@@ -496,22 +499,54 @@ function WorkHoursMockup() {
 }
 
 export function UseCasesSection() {
+  const [featured, ...rest] = useCases;
+
   return (
-    <section id="usecases" className="mt-24 scroll-mt-[62px] border-y border-border-subtle bg-white py-[90px]">
-      <div className="mx-auto max-w-[1180px] px-7">
-        <SectionHeader eyebrow="Use cases" title="What teams build with AdeHQ" />
-        <div className="mt-9 grid gap-4 md:grid-cols-3">
-          {useCases.map((u, i) => (
-            <FadeIn key={u.code} delay={i * 0.04}>
-              <div className="rounded-2xl border border-border bg-canvas p-5 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_12px_30px_-16px_rgba(40,34,24,0.22)]">
-                <span className="mb-3 inline-flex h-[34px] w-[34px] items-center justify-center rounded-[9px] bg-rail font-mono text-[13px] font-semibold text-white">
-                  {u.code}
-                </span>
-                <h3 className="text-base font-bold tracking-[-0.01em] text-ink">{u.title}</h3>
-                <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink-muted">{u.body}</p>
-              </div>
-            </FadeIn>
-          ))}
+    <section id="usecases" className="mt-24 scroll-mt-[90px] border-y border-border bg-muted py-24">
+      <div className="container-wide">
+        <SectionHeader
+          eyebrow="Use cases"
+          title="What teams build with AdeHQ"
+          action={<InlineCta href="/use-cases" label="All use cases" />}
+        />
+        <div className="mt-12 grid gap-4 lg:grid-cols-12">
+          <FadeIn className="lg:col-span-5">
+            <Link
+              href="/use-cases#launch"
+              className="group flex h-full min-h-[280px] flex-col justify-end overflow-hidden rounded-[24px] bg-gradient-to-br from-[#0C0E13] to-[#1e3a5f] p-8 no-underline"
+            >
+              <span className="mb-auto inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 font-mono text-sm font-bold text-white">
+                {featured.code}
+              </span>
+              <h3 className="text-[26px] font-bold text-white">{featured.title}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-white/75">
+                {featured.body}
+              </p>
+              <span className="mt-4 text-[13px] font-semibold text-[#93C5FD] group-hover:underline">
+                Read workflow →
+              </span>
+            </Link>
+          </FadeIn>
+          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
+            {rest.map((u, i) => (
+              <FadeIn key={u.code} delay={i * 0.04}>
+                <Link
+                  href={`/use-cases#${["research", "sales", "client", "ops", "agency"][i] ?? "launch"}`}
+                  className="group flex h-full flex-col border-l-2 border-accent/0 py-2 pl-0 no-underline transition-all hover:border-accent hover:pl-4"
+                >
+                  <span className="font-mono text-[11px] font-semibold text-accent">
+                    {u.code}
+                  </span>
+                  <h3 className="mt-1 text-[17px] font-bold text-ink group-hover:text-accent">
+                    {u.title}
+                  </h3>
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-ink-muted">
+                    {u.body}
+                  </p>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -520,16 +555,16 @@ export function UseCasesSection() {
 
 export function ComparisonSection() {
   return (
-    <section className="mx-auto max-w-[1080px] px-7 pt-24">
+    <section className="container-wide pt-24">
       <SectionHeader
         eyebrow="Why AdeHQ"
-        title="Not another chatbot. An operating system for AI employees."
+        title="Not another chatbot. Pay for work, not seats."
       />
       <FadeIn className="mt-9 overflow-hidden rounded-[20px] border border-border bg-white shadow-[0_1px_3px_rgba(40,30,15,0.06)]">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-[13.5px]">
             <thead>
-              <tr className="bg-canvas">
+              <tr className="bg-muted">
                 <th className="px-4 py-4 text-left text-[12.5px] font-semibold text-ink-muted">Capability</th>
                 <th className="px-2.5 py-4 text-center text-xs font-medium text-ink-subtle">ChatGPT / Claude</th>
                 <th className="px-2.5 py-4 text-center text-xs font-medium text-ink-subtle">Slack + bots</th>
@@ -559,7 +594,7 @@ export function ComparisonSection() {
 
 export function FaqSection() {
   return (
-    <section className="mx-auto max-w-[760px] px-7 pt-24">
+    <section className="container-wide max-w-[760px] pt-24">
       <SectionHeader eyebrow="FAQ" title="Questions, answered." />
       <FadeIn className="mt-9">
         <FaqAccordion items={homeFaqs} />
@@ -570,7 +605,7 @@ export function FaqSection() {
 
 export function FinalCtaSection() {
   return (
-    <section id="finalcta" className="mx-auto max-w-[1180px] scroll-mt-[74px] px-7 pt-24">
+    <section id="finalcta" className="container-wide scroll-mt-[90px] pt-24">
       <div className="relative overflow-hidden rounded-[26px] bg-gradient-to-br from-[#0C0E13] via-[#141A24] to-[#102A4D] px-6 py-16 text-center shadow-[0_30px_70px_-34px_rgba(40,30,15,0.6)] md:px-10">
         <div className="pointer-events-none absolute -top-[100px] left-1/2 h-[300px] w-[460px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.38),transparent_64%)] blur-[20px]" />
         <FadeIn className="relative">
@@ -579,17 +614,17 @@ export function FinalCtaSection() {
             <span className="text-xs text-white/70">Workforce ready</span>
           </div>
           <h2 className="text-[30px] font-bold leading-tight tracking-[-0.025em] text-white text-balance md:text-[40px]">
-            Your AI workforce is ready to hire.
+            Unlimited teammates. Unlimited AI employees. Start free.
           </h2>
           <p className="mx-auto mt-4 max-w-[540px] text-[16.5px] leading-relaxed text-white/80">
-            Join founders and small teams using AdeHQ to research, sell, plan,
-            and operate — from one workspace.
+            Slack charges as teams grow. AdeHQ lets your team grow freely — you
+            only pay for AI work capacity.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Button href="/pricing" size="lg">Start free</Button>
-            <Link href="/contact" className="inline-flex items-center rounded-[14px] border border-white/25 bg-white/[0.12] px-[18px] py-3 text-sm font-semibold text-white transition-colors hover:bg-white/20">
+            <Button href="/contact" variant="onDark" size="lg">
               Talk to us
-            </Link>
+            </Button>
           </div>
         </FadeIn>
       </div>

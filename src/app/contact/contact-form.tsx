@@ -78,6 +78,8 @@ export function ContactForm() {
   );
 }
 
+import { legalCompany } from "@/lib/legal/company";
+
 export function ContactPageContent() {
   return (
     <>
@@ -102,25 +104,58 @@ export function ContactPageContent() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <div className="flex flex-col gap-4">
-            <div className="rounded-[20px] border border-border bg-canvas p-5">
+            <div className="rounded-[20px] border border-border bg-muted p-5">
               <h2 className="font-bold text-ink">Sales & demos</h2>
               <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                 Want a walkthrough of hiring, orchestration, or AI Work Hours?
-                Choose &quot;Product demo&quot; and we&apos;ll set up a call.
+                Email{" "}
+                <a
+                  href={`mailto:${legalCompany.email}`}
+                  className="font-semibold text-accent hover:underline"
+                >
+                  {legalCompany.email}
+                </a>
+                .
               </p>
             </div>
-            <div className="rounded-[20px] border border-border bg-canvas p-5">
+            <div className="rounded-[20px] border border-border bg-muted p-5">
               <h2 className="font-bold text-ink">Support</h2>
               <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-                Existing customers: include your workspace name and we&apos;ll
-                route you to the right person.
+                Existing customers: email{" "}
+                <a
+                  href={`mailto:${legalCompany.email}`}
+                  className="font-semibold text-accent hover:underline"
+                >
+                  {legalCompany.email}
+                </a>{" "}
+                with your workspace name.
+              </p>
+            </div>
+            <div className="rounded-[20px] border border-border bg-muted p-5">
+              <h2 className="font-bold text-ink">Legal, privacy & billing</h2>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                For privacy requests, legal enquiries, billing, or security
+                disclosures, contact{" "}
+                <a
+                  href={`mailto:${legalCompany.email}`}
+                  className="font-semibold text-accent hover:underline"
+                >
+                  {legalCompany.email}
+                </a>
+                .
               </p>
             </div>
             <div className="rounded-[20px] bg-rail p-5 text-white">
               <h2 className="font-bold">Response time</h2>
               <p className="mt-2 text-sm leading-relaxed text-white/65">
-                We typically reply within one business day. For security
-                disclosures, select Security & privacy.
+                We typically reply within one business day. Email{" "}
+                <a
+                  href={`mailto:${legalCompany.email}`}
+                  className="text-white underline underline-offset-2"
+                >
+                  {legalCompany.email}
+                </a>
+                .
               </p>
             </div>
           </div>

@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import { LegalBlockRenderer } from "@/components/layout/legal-block-renderer";
 import { LegalPageLayout } from "@/components/layout/legal-page-layout";
-import { blocks } from "@/lib/legal/content/terms";
+import { blocks } from "@/lib/legal/content/refund-policy";
 import { legalCompany } from "@/lib/legal/company";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Terms governing your use of AdeHQ, AI employees, workspaces, and AI Work Hours.",
+  title: "Refund & Cancellation Policy",
+  description: "How cancellations and refunds work for AdeHQ paid plans, top-ups, and AI Work Hours.",
 };
 
-export default function TermsPage() {
+export default function RefundPolicyPage() {
   return (
     <LegalPageLayout
-      title="Terms of Service"
+      title="Refund and Cancellation Policy"
       effectiveDate={legalCompany.effectiveDate}
-      intro={`These Terms govern access to AdeHQ, operated by ${legalCompany.legalName}. By using AdeHQ you agree to these Terms and our related policies including Acceptable Use and AI Terms.`}
+      intro={`This policy explains how cancellations and refunds work for AdeHQ paid plans processed through providers such as ${legalCompany.paymentProvider}.`}
       lastReviewed="6 July 2026"
     >
       <LegalBlockRenderer blocks={blocks} />

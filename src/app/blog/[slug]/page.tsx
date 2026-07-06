@@ -28,7 +28,7 @@ const postContent: Record<string, string[]> = {
   "ai-work-hours-explained": [
     "Token pricing is accurate but opaque. Most founders don't want to estimate context windows, output tokens, or model tiers — they want to know whether their AI workforce can handle this week's workload.",
     "AI Work Hours are AdeHQ's answer: a weekly capacity measure tied to your plan. Efficient intelligence modes consume fewer hours; Strong and Long Context modes consume more. The dashboard shows usage in plain numbers — 14.2 of 150 hours used — not a spreadsheet of API calls.",
-    "When you run low, prepaid top-ups add capacity instantly. There are no surprise overage bills. And human collaboration never counts against your AI budget — unlimited human seats are free on every plan.",
+    "When the weekly pool runs out, AI employees pause until the next reset. Human collaboration never stops. There are no surprise overage bills — and unlimited human members and AI employees are included on every plan.",
   ],
   "orchestration-without-noise": [
     "Multi-bot Slack channels are noisy. Mention three bots and get three replies. AdeHQ reads intent and orchestrates who speaks, who leads, and who waits.",
