@@ -13,13 +13,13 @@ export const legalCompany = {
   vatNumber: "517264004",
   subprocessorLocations:
     "United Kingdom, European Economic Area, and United States",
-  email: "support@nexcache.com",
+  email: "support@adehq.com",
   emails: {
-    support: "support@nexcache.com",
-    privacy: "support@nexcache.com",
-    legal: "support@nexcache.com",
-    security: "support@nexcache.com",
-    billing: "support@nexcache.com",
+    support: "support@adehq.com",
+    privacy: "support@adehq.com",
+    legal: "support@adehq.com",
+    security: "support@adehq.com",
+    billing: "support@adehq.com",
   },
   paymentProvider: "Revolut Pay",
   infrastructure:

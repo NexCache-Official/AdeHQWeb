@@ -47,15 +47,36 @@ export function Avatar({
   );
 }
 
-export function Logo({ className }: { className?: string }) {
+export function Logo({
+  className,
+  variant = "full",
+}: {
+  className?: string;
+  variant?: "full" | "icon" | "text";
+}) {
+  const icon = "/adehq_icon_light.svg";
+  const text = "/AdeHQ_text_logo.svg";
+
   return (
-    <span
-      className={cn(
-        "inline-flex h-[30px] w-[30px] items-center justify-center rounded-[9px] bg-gradient-to-br from-[#2563EB] to-[#5B93F6] text-[17px] font-extrabold text-white shadow-[0_4px_12px_-5px_rgba(37,99,235,0.6)]",
-        className,
+    <span className={cn("inline-flex items-center gap-2", className)}>
+      {(variant === "full" || variant === "icon") && (
+        <img
+          src={icon}
+          alt="AdeHQ"
+          className="h-[28px] w-[28px] object-contain"
+          loading="eager"
+          decoding="async"
+        />
       )}
-    >
-      A
+      {(variant === "full" || variant === "text") && (
+        <img
+          src={text}
+          alt="AdeHQ"
+          className="h-[24px] w-auto object-contain"
+          loading="eager"
+          decoding="async"
+        />
+      )}
     </span>
   );
 }

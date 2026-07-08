@@ -361,7 +361,7 @@ export function HowItWorksSection() {
       />
       <ProcessRail steps={steps} />
       <div className="mt-10">
-        <Button href="/pricing" size="lg">
+        <Button href="https://app.adehq.com/signup" size="lg">
           Try the hiring experience
         </Button>
       </div>
@@ -624,7 +624,7 @@ export function FinalCtaSection() {
             only pay for AI work capacity.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Button href="/pricing" size="lg">Start free</Button>
+            <Button href="https://app.adehq.com/signup" size="lg">Start free</Button>
             <Button href="/contact" variant="onDark" size="lg">
               Talk to us
             </Button>

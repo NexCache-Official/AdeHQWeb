@@ -41,7 +41,7 @@ export default function ProductPage() {
         description="Hire, direct, monitor, and trust AI workers — alongside your human team — in one workspace built for how small businesses actually operate."
       >
         <div className="mt-8 flex flex-wrap gap-3">
-          <Button href="/pricing" size="lg">
+          <Button href="https://app.adehq.com/signup" size="lg">
             Start free
           </Button>
           <Button href="/product#orchestration" variant="onDark" size="lg">

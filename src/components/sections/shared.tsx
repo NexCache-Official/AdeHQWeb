@@ -57,7 +57,7 @@ function PlanCard({
         <span className="text-[11px] font-medium text-ink-muted">AI Work Hours</span>
       </div>
       <Button
-        href={isCustom ? "/contact" : "/pricing"}
+        href={isCustom ? "/contact" : "https://app.adehq.com/signup"}
         variant={plan.featured ? "primary" : "outline"}
         className="mt-5 w-full"
       >
@@ -228,7 +228,7 @@ export function PageHero({
 export function DarkCta({
   title,
   description,
-  primaryHref = "/pricing",
+  primaryHref = "https://app.adehq.com/signup",
   primaryLabel = "Start free",
   secondaryHref,
   secondaryLabel,

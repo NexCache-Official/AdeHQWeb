@@ -9,6 +9,7 @@ type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 };
 
 const variants = {
@@ -39,15 +40,25 @@ export function Button({
   children,
   onClick,
   type = "button",
+  disabled = false,
 }: ButtonProps) {
   const classes = cn(
     "inline-flex items-center justify-center font-semibold transition-all duration-150",
     variants[variant],
     sizes[size],
     className,
+    disabled && "pointer-events-none opacity-60",
   );
 
   if (href) {
+    if (disabled) {
+      return (
+        <span className={classes} aria-disabled="true" role="link">
+          {children}
+        </span>
+      );
+    }
+
     return (
       <Link href={href} className={classes} style={{ color: variant === "primary" ? "#ffffff" : undefined }}>
         {children}
@@ -56,7 +67,7 @@ export function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
       {children}
     </button>
   );

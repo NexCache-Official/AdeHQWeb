@@ -94,7 +94,7 @@ export function HeroSection() {
                 </div>
 
                 <div className="mt-6 flex w-full flex-col gap-2.5 sm:mt-9 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
-                  <Button href="/pricing" size="lg" className="w-full sm:w-auto">
+                  <Button href="https://app.adehq.com/signup" size="lg" className="w-full sm:w-auto">
                     Start free
                   </Button>
                   <Link
@@ -245,8 +245,14 @@ export function HeroSection() {
 
 function LogoMini() {
   return (
-    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-[#2563EB] to-[#5B93F6] text-sm font-extrabold text-white">
-      A
+    <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-white">
+      <img
+        src="/adehq_icon_light.svg"
+        alt="AdeHQ"
+        className="h-[18px] w-[18px] object-contain"
+        loading="eager"
+        decoding="async"
+      />
     </span>
   );
 }

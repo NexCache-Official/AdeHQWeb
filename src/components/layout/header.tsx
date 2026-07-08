@@ -110,9 +110,6 @@ export function Header() {
         <div className="container-wide flex h-14 items-center justify-between gap-3 sm:h-[68px] sm:gap-8">
           <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2 no-underline sm:gap-2.5">
             <Logo />
-            <span className="truncate text-[16px] font-bold tracking-[-0.02em] text-ink sm:text-[18px]">
-              AdeHQ
-            </span>
           </Link>
 
           <nav className="hidden items-center gap-0.5 lg:flex">
@@ -143,7 +140,7 @@ export function Header() {
 
           <div className="flex items-center gap-2">
             <Link
-              href="/contact"
+              href="https://app.adehq.com/login"
               className="hidden rounded-[9px] px-3 py-2 text-sm font-semibold text-ink-muted transition-colors hover:text-ink md:inline"
             >
               Sign in
@@ -151,7 +148,7 @@ export function Header() {
             <Button href="/contact" variant="ghost" size="sm" className="hidden xl:inline-flex">
               Book a demo
             </Button>
-            <Button href="/pricing" size="sm" className="inline-flex">
+            <Button href="https://app.adehq.com/signup" size="sm" className="inline-flex">
               <span className="hidden min-[400px]:inline">Start free</span>
               <span className="min-[400px]:hidden">Free</span>
             </Button>
@@ -219,14 +216,14 @@ export function Header() {
         ))}
         <div className="mt-4 flex flex-col gap-2">
           <Link
-            href="/contact"
+            href="https://app.adehq.com/login"
             onClick={() => setMobileOpen(false)}
             className="rounded-[11px] border border-white/15 py-3 text-center text-[14px] font-semibold text-white no-underline"
           >
-            Book a demo
+            Sign in
           </Link>
           <Link
-            href="/pricing"
+            href="https://app.adehq.com/signup"
             onClick={() => setMobileOpen(false)}
             className="rounded-[11px] bg-accent py-3.5 text-center text-[15px] font-semibold text-white no-underline"
           >

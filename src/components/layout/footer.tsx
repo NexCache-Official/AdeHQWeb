@@ -45,8 +45,9 @@ export function Footer({ compact = false }: { compact?: boolean }) {
       <footer className="mt-[90px] bg-rail text-white">
         <div className="container-wide flex flex-wrap items-center justify-between gap-4 py-14">
           <div className="flex items-center gap-2.5">
-            <Logo />
-            <span className="text-[17px] font-bold tracking-[-0.02em]">AdeHQ</span>
+            <span className="rounded-[12px] bg-white/95 p-1">
+              <Logo />
+            </span>
           </div>
           <span className="text-[12.5px] text-white/55">
             © 2026 NexCache Limited · AdeHQ
@@ -72,8 +73,9 @@ export function Footer({ compact = false }: { compact?: boolean }) {
       <div className="container-wide grid gap-8 pt-12 pb-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)] lg:pt-16">
         <div>
           <div className="mb-4 flex items-center gap-2.5">
-            <Logo />
-            <span className="text-[18px] font-bold tracking-[-0.02em]">AdeHQ</span>
+            <span className="rounded-[12px] bg-white/95 p-1">
+              <Logo />
+            </span>
           </div>
           <p className="max-w-[300px] text-[14px] leading-relaxed text-white/62">
             Hire and manage an AI workforce from one workspace. Unlimited humans.
@@ -97,7 +99,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
             ))}
           </div>
           <Link
-            href="/pricing"
+            href="https://app.adehq.com/signup"
             className="mt-6 inline-flex items-center gap-2 rounded-[11px] bg-accent px-4 py-2.5 text-[13.5px] font-semibold !text-white no-underline transition-colors hover:bg-accent-d"
           >
             Start free
