@@ -249,7 +249,7 @@ function LogoMini() {
       <img
         src="/adehq_icon_light.svg"
         alt="AdeHQ"
-        className="h-[18px] w-[18px] object-contain"
+        className="h-[21px] w-[21px] object-contain"
         loading="eager"
         decoding="async"
       />

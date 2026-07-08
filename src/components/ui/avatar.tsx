@@ -63,7 +63,7 @@ export function Logo({
         <img
           src={icon}
           alt="AdeHQ"
-          className="h-[28px] w-[28px] object-contain"
+          className="h-[40px] w-[40px] object-contain"
           loading="eager"
           decoding="async"
         />
@@ -72,7 +72,7 @@ export function Logo({
         <img
           src={text}
           alt="AdeHQ"
-          className="h-[24px] w-auto object-contain"
+          className="h-[40px] w-auto object-contain"
           loading="eager"
           decoding="async"
         />
