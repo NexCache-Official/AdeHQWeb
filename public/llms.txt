@@ -1,0 +1,66 @@
+# AdeHQ
+
+> AdeHQ is an AI workforce platform for hiring, managing, and orchestrating persistent AI employees alongside unlimited human teammates. Pay for AI work capacity through weekly AI Work Hours — not per-seat pricing.
+
+AdeHQ is built for solo founders, freelancers, agencies, and small teams who want accountable AI workers with roles, memory, approvals, and work logs — not another session-based chatbot.
+
+## Product summary
+
+- Hire AI employees with names, roles, personalities, and persistent memory
+- Organize work in rooms and topics instead of endless chat threads
+- Orchestrate which AI employees lead, collaborate, or stay quiet
+- Govern external actions with human approvals and audit trails
+- Meter AI workload with simple weekly AI Work Hours instead of token math
+- Include unlimited human members and unlimited AI employees on every plan
+
+## Primary pages
+
+- Home: https://adehq.com/
+- Product: https://adehq.com/product
+- Pricing: https://adehq.com/pricing
+- Use cases: https://adehq.com/use-cases
+- Blog: https://adehq.com/blog
+- About: https://adehq.com/about
+- Contact: https://adehq.com/contact
+- Security: https://adehq.com/security
+
+## Best pages for common questions
+
+- What is AdeHQ? https://adehq.com/
+- How does pricing work? https://adehq.com/pricing
+- What are AI Work Hours? https://adehq.com/blog/ai-work-hours-explained
+- Why hire AI employees instead of models? https://adehq.com/blog/hire-ai-employees-not-models
+- Product launch workflows: https://adehq.com/use-cases#launch
+- Market research workflows: https://adehq.com/use-cases#research
+- Sales outreach workflows: https://adehq.com/use-cases#sales
+- Agency / client delivery workflows: https://adehq.com/use-cases#client
+
+## Positioning
+
+AdeHQ is an alternative to:
+- session-based AI chat tools like ChatGPT or Claude for team workflows
+- per-seat collaboration tools like Slack with bolt-on bots
+- generic agent builders without persistent employee identity
+
+## Differentiators
+
+- Unlimited human team members on every plan
+- Unlimited AI employees on every plan
+- No per-seat pricing
+- Persistent employee identity, memory, and work history
+- Hire-by-role experience with candidates and job briefs
+- Work graph with approvals, work logs, and source-linked memory
+
+## Company
+
+- Brand: AdeHQ
+- Legal entity: NexCache Limited
+- Website: https://adehq.com
+- App signup: https://app.adehq.com/signup
+- App login: https://app.adehq.com/login
+- Sales / hello: hello@adehq.com
+- Support: support@adehq.com
+
+## Sitemap
+
+https://adehq.com/sitemap.xml

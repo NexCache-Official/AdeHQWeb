@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import { Infinity, Users, Bot } from "lucide-react";
 import {
   DarkCta,
@@ -9,17 +10,27 @@ import {
 import { PricingComparisonTable } from "@/components/sections/pricing-table";
 import { FaqAccordion } from "@/components/ui/faq";
 import { FadeIn, SectionHeader } from "@/components/ui/motion";
+import { JsonLd } from "@/components/seo/json-ld";
 import { pricingFaqs, pricingPositioning } from "@/lib/data";
+import { faqSchema } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: "Pricing",
+export const metadata: Metadata = createPageMetadata({
+  title: "AI Workforce Pricing — Unlimited Humans, Pay for AI Work Hours",
   description:
-    "Unlimited human members and unlimited AI employees on every plan. Pay for AI work capacity, not seats.",
-};
+    "Compare AdeHQ plans with unlimited human members and unlimited AI employees. No per-seat pricing — only weekly AI Work Hours for active AI work.",
+  path: "/pricing",
+  keywords: [
+    "AI workforce pricing",
+    "no per-seat AI pricing",
+    "AI work hours pricing",
+    "unlimited AI employees pricing",
+  ],
+});
 
 export default function PricingPage() {
   return (
     <>
+      <JsonLd data={faqSchema(pricingFaqs)} />
       <PageHero
         dark
         split

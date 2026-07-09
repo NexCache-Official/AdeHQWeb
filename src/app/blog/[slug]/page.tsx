@@ -2,10 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DarkCta } from "@/components/sections/shared";
+import { JsonLd } from "@/components/seo/json-ld";
 import { blogPosts } from "@/lib/data";
+import { createPageMetadata } from "@/lib/seo";
+import { articleSchema } from "@/lib/structured-data";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
+}
+
+function parseBlogDate(date: string) {
+  return new Date(date).toISOString();
 }
 
 export async function generateMetadata({
@@ -16,7 +23,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return { title: "Post not found" };
-  return { title: post.title, description: post.excerpt };
+
+  return createPageMetadata({
+    title: post.title,
+    description: post.excerpt,
+    path: `/blog/${post.slug}`,
+    type: "article",
+    publishedTime: parseBlogDate(post.date),
+    keywords: [post.category.toLowerCase(), "AdeHQ blog", post.title.toLowerCase()],
+  });
 }
 
 const postContent: Record<string, string[]> = {
@@ -55,6 +70,14 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          title: post.title,
+          description: post.excerpt,
+          path: `/blog/${post.slug}`,
+          datePublished: parseBlogDate(post.date),
+        })}
+      />
       <article className="container-prose px-[var(--container-padding)] pt-16 pb-8">
         <Link
           href="/blog"
@@ -66,7 +89,7 @@ export default async function BlogPostPage({
           <span className="rounded-md bg-accent-soft px-2 py-0.5 font-mono font-semibold text-accent">
             {post.category}
           </span>
-          <span>{post.date}</span>
+          <time dateTime={parseBlogDate(post.date)}>{post.date}</time>
           <span>·</span>
           <span>{post.readTime}</span>
         </div>

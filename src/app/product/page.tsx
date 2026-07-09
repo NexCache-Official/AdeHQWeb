@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import {
   Brain,
   Globe,
@@ -17,11 +18,18 @@ import {
 } from "@/components/ui/showcase";
 import { intelligenceModes, orchestrationModes } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Product",
+export const metadata: Metadata = createPageMetadata({
+  title: "AI Employee Platform — Hire, Orchestrate & Manage AI Workers",
   description:
-    "The operating system for AI employees — hiring, orchestration, memory, approvals, and work logs.",
-};
+    "Explore AdeHQ's AI workforce platform: hire persistent AI employees, coordinate work in rooms, govern memory, require approvals, and track every action in work logs.",
+  path: "/product",
+  keywords: [
+    "AI employee platform",
+    "AI orchestration software",
+    "persistent AI workers",
+    "AI approvals and audit logs",
+  ],
+});
 
 export default function ProductPage() {
   return (

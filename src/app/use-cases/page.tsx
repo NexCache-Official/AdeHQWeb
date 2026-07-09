@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { DarkCta, PageHero } from "@/components/sections/shared";
 import { FadeIn } from "@/components/ui/motion";
 import { SectionDivider } from "@/components/ui/showcase";
 import { useCases } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Use cases",
+export const metadata: Metadata = createPageMetadata({
+  title: "AI Workforce Use Cases — Research, Sales, Launch & Agency Workflows",
   description:
-    "What teams build with AdeHQ — product launches, market research, sales outreach, client delivery, and more.",
-};
+    "See how founders, agencies, and small teams use AdeHQ for product launches, market research, sales outreach, client delivery, and operations.",
+  path: "/use-cases",
+  keywords: [
+    "AI agents for product launch",
+    "AI market research assistant",
+    "AI sales outreach software",
+    "AI agency workflows",
+  ],
+});
 
 const expandedUseCases = [
   {

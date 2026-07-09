@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/seo";
 import { DarkCta } from "@/components/sections/shared";
 import { FadeIn } from "@/components/ui/motion";
 import { blogPosts } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description: "Product updates, engineering notes, and guides from the AdeHQ team.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "AdeHQ Blog — AI Workforce Guides, Product Notes & Engineering",
+  description:
+    "Read guides on hiring AI employees, AI Work Hours, orchestration, memory, and building an AI-native team with AdeHQ.",
+  path: "/blog",
+  keywords: [
+    "AI workforce blog",
+    "hire AI employees guide",
+    "AI work hours guide",
+    "AI orchestration articles",
+  ],
+});
 
 export default function BlogPage() {
   return (

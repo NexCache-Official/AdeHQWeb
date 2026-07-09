@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { DarkCta, PageHero } from "@/components/sections/shared";
 import { FadeIn, SectionHeader } from "@/components/ui/motion";
 import { BentoPanel, EditorialRow } from "@/components/ui/showcase";
 
-export const metadata: Metadata = {
-  title: "About",
+export const metadata: Metadata = createPageMetadata({
+  title: "About AdeHQ — Building the Operating System for AI Employees",
   description:
-    "AdeHQ is building the operating system for AI employees — for solo founders, freelancers, and AI-native teams.",
-};
+    "Learn how AdeHQ helps solo founders, freelancers, and AI-native teams hire persistent AI employees with memory, orchestration, and accountability.",
+  path: "/about",
+  keywords: ["about AdeHQ", "AI workforce company", "AI employee startup"],
+});
 
 const values = [
   {
